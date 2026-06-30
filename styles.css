@@ -185,6 +185,7 @@ ion-icon { pointer-events: none; }
 }
 .nav.is-scrolled {
   background: rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
   backdrop-filter: blur(16px) saturate(160%);
   border-bottom-color: var(--line);
   box-shadow: 0 6px 24px -18px rgba(16, 24, 64, 0.5);
@@ -1062,6 +1063,12 @@ body.menu-open { overflow: hidden; }
   .nav__links > a:not(.btn) { font-size: 1.2rem; }
   .nav__cta { margin-top: 0.5rem; }
   .nav__toggle { display: flex; }
+  /* Nav opaca su mobile: evita il flicker del backdrop-filter durante lo scroll */
+  .nav.is-scrolled {
+    background: #ffffff;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
 }
 
 @media (max-width: 760px) {
