@@ -256,6 +256,19 @@ ion-icon { pointer-events: none; }
 .nav__toggle.is-open span:nth-child(2) { opacity: 0; }
 .nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Overlay scuro dietro al menu mobile */
+.nav__scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 14, 32, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease);
+  z-index: 890;
+}
+.nav__scrim.is-open { opacity: 1; pointer-events: auto; }
+body.menu-open { overflow: hidden; }
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
@@ -1039,8 +1052,7 @@ ion-icon { pointer-events: none; }
     justify-content: center;
     gap: 1.6rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
+    background: #ffffff;
     border-left: 1px solid var(--line);
     box-shadow: -20px 0 50px -30px rgba(16, 24, 64, 0.4);
     transform: translateX(100%);

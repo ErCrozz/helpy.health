@@ -26,10 +26,14 @@
   const toggle = document.getElementById("navToggle");
   const links = document.getElementById("navLinks");
 
+  const scrim = document.getElementById("navScrim");
+
   function closeMenu() {
     if (!links || !toggle) return;
     links.classList.remove("is-open");
     toggle.classList.remove("is-open");
+    if (scrim) scrim.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-label", "Apri menu");
   }
@@ -38,14 +42,18 @@
     toggle.addEventListener("click", function () {
       const open = links.classList.toggle("is-open");
       toggle.classList.toggle("is-open", open);
+      if (scrim) scrim.classList.toggle("is-open", open);
+      document.body.classList.toggle("menu-open", open);
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Chiudi menu" : "Apri menu");
     });
-    // Close on link tap
+    // Chiudi al tap su un link
     links.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", closeMenu);
     });
-    // Close on Escape
+    // Chiudi al tap sull'overlay
+    if (scrim) scrim.addEventListener("click", closeMenu);
+    // Chiudi con Escape
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeMenu();
     });
