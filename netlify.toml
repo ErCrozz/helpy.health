@@ -1,0 +1,20 @@
+# Netlify — configurazione per il sito statico Helpy
+# Nessun build step: si pubblica la root della cartella così com'è.
+
+[build]
+  publish = "."
+
+# --- Header di sicurezza su tutte le pagine ---
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# --- Cache lunga per gli asset statici (immagini) ---
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"

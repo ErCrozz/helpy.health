@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1e4dff" />
+
+  <title>Helpy — Un infermiere a domicilio, in pochi tap</title>
+  <meta name="description" content="Helpy è la piattaforma on-demand che collega pazienti e infermieri certificati per prestazioni a domicilio. Prenoti in un minuto, ricevi cure tracciate e paghi in sicurezza direttamente dall'app." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Helpy — Un infermiere a domicilio, in pochi tap" />
+  <meta property="og:description" content="La piattaforma on-demand per l'assistenza infermieristica domiciliare. Prenota, ricevi cure tracciate, paga in sicurezza." />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Helpy — home">
+        <img src="assets/logo.png" alt="" class="brand__mark" width="40" height="40" />
+        <span class="brand__name">Helpy</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navigazione principale">
+        <a href="#problema">Il problema</a>
+        <a href="#soluzione">Soluzione</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#app">L'app</a>
+        <a href="#sicurezza">Sicurezza</a>
+        <a href="#contatti" class="btn btn--primary btn--sm nav__cta">Contattaci</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="aurora aurora--1"></div>
+        <div class="aurora aurora--2"></div>
+        <div class="aurora aurora--3"></div>
+        <div class="grid-overlay"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="badge" data-reveal>
+            <span class="badge__dot"></span> Start Cup Lazio 2026
+          </span>
+
+          <h1 class="hero__title" data-reveal>
+            Un infermiere<br />a domicilio,<br />
+            <span class="grad-text">in pochi tap.</span>
+          </h1>
+
+          <p class="hero__lead" data-reveal>
+            Helpy collega pazienti e infermieri certificati per prestazioni a domicilio.
+            Prenoti in un minuto, ricevi cure tracciate e paghi in sicurezza —
+            direttamente dall'app.
+          </p>
+
+          <div class="hero__actions" data-reveal>
+            <a href="#servizi" class="btn btn--primary btn--lg">
+              Scopri i servizi
+              <ion-icon name="arrow-forward"></ion-icon>
+            </a>
+            <a href="#app" class="btn btn--ghost btn--lg">
+              <ion-icon name="play-circle-outline"></ion-icon>
+              Come funziona
+            </a>
+          </div>
+
+          <ul class="hero__trust" data-reveal>
+            <li><ion-icon name="shield-checkmark"></ion-icon> Infermieri certificati</li>
+            <li><ion-icon name="ribbon"></ion-icon> Copertura assicurativa</li>
+            <li><ion-icon name="lock-closed"></ion-icon> Pagamenti protetti</li>
+          </ul>
+        </div>
+
+        <!-- Phone mockup: ricostruzione della schermata "I nostri servizi" dell'app -->
+        <div class="hero__device" data-reveal>
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="appbar">
+                <span class="appbar__time">14:07</span>
+                <span class="appbar__status">
+                  <ion-icon name="cellular"></ion-icon>
+                  <ion-icon name="wifi"></ion-icon>
+                  <ion-icon name="battery-full"></ion-icon>
+                </span>
+              </div>
+
+              <div class="app">
+                <p class="app__eyebrow">I nostri servizi</p>
+                <h3 class="app__hi">Ciao, Paziente 👋</h3>
+                <p class="app__sub">Di quale servizio hai bisogno oggi?</p>
+
+                <div class="app__grid">
+                  <div class="tile" style="--c:#DC2626"><span class="tile__ic"><ion-icon name="water"></ion-icon></span>Prelievo Sangue</div>
+                  <div class="tile" style="--c:#EA580C"><span class="tile__ic"><ion-icon name="flash"></ion-icon></span>Prelievo Urgente</div>
+                  <div class="tile" style="--c:#7C3AED"><span class="tile__ic"><ion-icon name="fitness"></ion-icon></span>Intramuscolo</div>
+                  <div class="tile" style="--c:#2563EB"><span class="tile__ic"><ion-icon name="pulse"></ion-icon></span>Iniez. Diabete</div>
+                  <div class="tile" style="--c:#059669"><span class="tile__ic"><ion-icon name="bandage"></ion-icon></span>Medicazione</div>
+                  <div class="tile" style="--c:#BE185D"><span class="tile__ic"><ion-icon name="diamond"></ion-icon></span>Infusione Elite</div>
+                </div>
+
+                <div class="app__tabbar">
+                  <span class="app__tab is-active"><ion-icon name="grid"></ion-icon>Servizi</span>
+                  <span class="app__tab"><ion-icon name="people"></ion-icon>Infermieri</span>
+                  <span class="app__tab"><ion-icon name="calendar"></ion-icon>Prenotazioni</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- floating cards -->
+          <div class="floatcard floatcard--book">
+            <span class="floatcard__ic" style="--c:#01696f"><ion-icon name="checkmark-circle"></ion-icon></span>
+            <div>
+              <strong>Prenotato!</strong>
+              <small>Oggi · 09:00 – 12:00</small>
+            </div>
+          </div>
+          <div class="floatcard floatcard--pay">
+            <span class="floatcard__ic" style="--c:#1e4dff"><ion-icon name="card"></ion-icon></span>
+            <div>
+              <strong>Pagamento protetto</strong>
+              <small>Addebito a servizio confermato</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Prelievo Sangue</span><span class="dot">•</span>
+        <span>Iniezione Intramuscolo</span><span class="dot">•</span>
+        <span>Medicazione Avanzata</span><span class="dot">•</span>
+        <span>Infusione IV</span><span class="dot">•</span>
+        <span>ECG Domiciliare</span><span class="dot">•</span>
+        <span>Prelievo Urgente</span><span class="dot">•</span>
+        <span>Iniezione Diabete</span><span class="dot">•</span>
+        <span>Infusione Elite</span><span class="dot">•</span>
+        <span>Prelievo Sangue</span><span class="dot">•</span>
+        <span>Iniezione Intramuscolo</span><span class="dot">•</span>
+        <span>Medicazione Avanzata</span><span class="dot">•</span>
+        <span>Infusione IV</span><span class="dot">•</span>
+        <span>ECG Domiciliare</span><span class="dot">•</span>
+        <span>Prelievo Urgente</span><span class="dot">•</span>
+        <span>Iniezione Diabete</span><span class="dot">•</span>
+        <span>Infusione Elite</span><span class="dot">•</span>
+      </div>
+    </div>
+
+    <!-- ============ PROBLEMA ============ -->
+    <section class="section section--dark" id="problema">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <h2 class="section__title">Un sistema<br /><span class="grad-text">al limite.</span></h2>
+          <p class="section__intro">
+            L'Italia affronta una crisi strutturale legata all'invecchiamento della
+            popolazione e alla carenza di cure pubbliche a domicilio.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat" data-reveal>
+            <span class="stat__num"><span data-count="35" data-suffix="%"></span></span>
+            <span class="stat__label">Over 65 entro il 2050</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__num"><span data-count="56" data-suffix="%"></span></span>
+            <span class="stat__label">Over 65 con almeno una patologia cronica</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__num"><span data-count="137" data-prefix="+" data-suffix="%"></span></span>
+            <span class="stat__label">Spesa sanitaria privata dal 2016 a oggi</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__num"><span data-count="4" data-suffix="M"></span></span>
+            <span class="stat__label">Anziani esclusi dall'assistenza domiciliare pubblica</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRONTO SOCCORSO ============ -->
+    <section class="section section--er">
+      <div class="container er">
+        <div class="er__main" data-reveal>
+          <p class="er__big">
+            Il <span class="grad-text">20%</span> dei pazienti fragili torna in ospedale
+            entro <span class="grad-text">30 giorni</span> dalla dimissione, per complicanze
+            facilmente gestibili a domicilio.
+          </p>
+          <p class="er__note">
+            Ogni rientro evitabile è un letto di pronto soccorso occupato, un costo per
+            il sistema e un rischio per il paziente. I pronto soccorso sono saturi proprio
+            di ciò che si potrebbe curare a casa.
+          </p>
+        </div>
+
+        <ul class="er__list">
+          <li data-reveal>
+            <span class="er__ic"><ion-icon name="trending-up-outline"></ion-icon></span>
+            <div>
+              <strong>Rischio di riacutizzazioni cliniche</strong>
+              <p>Senza monitoraggio, piccole complicanze degenerano in emergenze.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="er__ic"><ion-icon name="time-outline"></ion-icon></span>
+            <div>
+              <strong>Nessun follow-up dopo la dimissione</strong>
+              <p>Il paziente rientra a casa senza una rete di assistenza continua.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="er__ic"><ion-icon name="battery-dead-outline"></ion-icon></span>
+            <div>
+              <strong>Burnout totale del caregiver</strong>
+              <p>Le famiglie sostengono da sole un carico assistenziale insostenibile.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SOLUZIONE ============ -->
+    <section class="section section--light" id="soluzione">
+      <div class="container">
+        <div class="section__head section__head--center" data-reveal>
+          <h2 class="section__title section__title--dark">La piattaforma B2B2C<br />on-demand per l'assistenza domiciliare.</h2>
+          <p class="section__intro section__intro--dark">
+            Helpy porta l'infermiere a casa del paziente in tre passaggi.
+            Niente attese, niente burocrazia: solo cura, quando serve.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step" data-reveal>
+            <span class="step__n">1</span>
+            <span class="step__ic" style="--c:#1e4dff"><ion-icon name="search"></ion-icon></span>
+            <h3>Cerca l'infermiere</h3>
+            <p>Scegli il servizio e trova gli infermieri certificati disponibili nella tua microzona, con filtri per prossimità, valutazione e disponibilità immediata.</p>
+          </article>
+          <article class="step" data-reveal>
+            <span class="step__n">2</span>
+            <span class="step__ic" style="--c:#5b46f0"><ion-icon name="hand-left"></ion-icon></span>
+            <h3>Prenota in pochi tap</h3>
+            <p>Selezioni data e orario tra le fasce libere e confermi. La richiesta arriva subito all'infermiere, che accetta in tempo reale.</p>
+          </article>
+          <article class="step" data-reveal>
+            <span class="step__n">3</span>
+            <span class="step__ic" style="--c:#01696f"><ion-icon name="shield-checkmark"></ion-icon></span>
+            <h3>Cura tracciata e sicura</h3>
+            <p>L'intervento viene eseguito, tracciato e documentato in app. Il pagamento è protetto e la fattura è disponibile con un tap.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVIZI ============ -->
+    <section class="section section--dark" id="servizi">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <h2 class="section__title">Interventi rapidi,<br /><span class="grad-text">a casa tua.</span></h2>
+          <p class="section__intro">
+            Nove prestazioni infermieristiche eseguite a domicilio da professionisti
+            certificati e assicurati. Tutto il materiale è incluso.
+          </p>
+        </div>
+
+        <div class="bento">
+          <article class="svc" style="--c:#DC2626" data-reveal>
+            <span class="svc__ic"><ion-icon name="water"></ion-icon></span>
+            <h3>Prelievo Sangue</h3>
+            <p>Prelievo ematico venoso per analisi di laboratorio, con consegna dei campioni al laboratorio convenzionato.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~30 min</span>
+          </article>
+          <article class="svc" style="--c:#EA580C" data-reveal>
+            <span class="svc__ic"><ion-icon name="flash"></ion-icon></span>
+            <h3>Prelievo Urgente</h3>
+            <p>Prelievo con ritiro e consegna rapida al laboratorio, disponibile entro 2 ore dalla prenotazione.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~30 min</span>
+          </article>
+          <article class="svc" style="--c:#7C3AED" data-reveal>
+            <span class="svc__ic"><ion-icon name="fitness"></ion-icon></span>
+            <h3>Iniezione Intramuscolo</h3>
+            <p>Somministrazione di iniezioni intramuscolari con monitoraggio post-somministrazione.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~20 min</span>
+          </article>
+          <article class="svc" style="--c:#2563EB" data-reveal>
+            <span class="svc__ic"><ion-icon name="pulse"></ion-icon></span>
+            <h3>Iniezione Diabete</h3>
+            <p>Somministrazione di insulina, misurazione della glicemia ed educazione all'autogestione.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~20 min</span>
+          </article>
+          <article class="svc" style="--c:#059669" data-reveal>
+            <span class="svc__ic"><ion-icon name="bandage"></ion-icon></span>
+            <h3>Medicazione Semplice</h3>
+            <p>Medicazione di ferite superficiali, punti di sutura e piccole lesioni, con bendaggio appropriato.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~30 min</span>
+          </article>
+          <article class="svc" style="--c:#0891B2" data-reveal>
+            <span class="svc__ic"><ion-icon name="medkit"></ion-icon></span>
+            <h3>Medicazione Avanzata</h3>
+            <p>Medicazioni complesse per ulcere e piaghe da decubito con presidi avanzati secondo protocollo medico.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~45 min</span>
+          </article>
+          <article class="svc" style="--c:#4F46E5" data-reveal>
+            <span class="svc__ic"><ion-icon name="water-outline"></ion-icon></span>
+            <h3>Infusione IV</h3>
+            <p>Terapia endovenosa a domicilio con posizionamento dell'accesso venoso e monitoraggio dei parametri vitali.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~60 min</span>
+          </article>
+          <article class="svc" style="--c:#BE185D" data-reveal>
+            <span class="svc__ic"><ion-icon name="diamond"></ion-icon></span>
+            <h3>Infusione Elite</h3>
+            <p>Infusioni premium: flebo vitaminiche, terapie reidratanti e personalizzate con assistenza dedicata.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~90 min</span>
+          </article>
+          <article class="svc" style="--c:#E11D48" data-reveal>
+            <span class="svc__ic"><ion-icon name="heart"></ion-icon></span>
+            <h3>ECG Domiciliare</h3>
+            <p>Elettrocardiogramma a 12 derivazioni con apparecchiatura portatile e refertazione del cardiologo.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~30 min</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APP / COME FUNZIONA ============ -->
+    <section class="section section--light" id="app">
+      <div class="container app-sec">
+        <div class="app-sec__copy" data-reveal>
+          <h2 class="section__title section__title--dark">Semplice<br />come deve essere.</h2>
+          <p class="section__intro section__intro--dark">
+            Un'esperienza pensata per chi ha bisogno di cure, non di complicazioni.
+            Dalla ricerca al pagamento, tutto in un'unica app.
+          </p>
+
+          <ul class="feats">
+            <li>
+              <span class="feats__ic" style="--c:#1e4dff"><ion-icon name="navigate"></ion-icon></span>
+              <div>
+                <strong>Logistica di microzona</strong>
+                <p>Trovi l'infermiere più vicino a te: interventi più rapidi e tempi di attesa ridotti al minimo.</p>
+              </div>
+            </li>
+            <li>
+              <span class="feats__ic" style="--c:#5b46f0"><ion-icon name="options"></ion-icon></span>
+              <div>
+                <strong>Filtri intelligenti</strong>
+                <p>Disponibile ora, vicino a me, top rated o capozona: scegli l'infermiere giusto in un attimo.</p>
+              </div>
+            </li>
+            <li>
+              <span class="feats__ic" style="--c:#01696f"><ion-icon name="notifications"></ion-icon></span>
+              <div>
+                <strong>Notifiche in tempo reale</strong>
+                <p>Conferme, promemoria e aggiornamenti sullo stato della prestazione, momento per momento.</p>
+              </div>
+            </li>
+            <li>
+              <span class="feats__ic" style="--c:#DC2626"><ion-icon name="document-text"></ion-icon></span>
+              <div>
+                <strong>Cura tracciata e documentata</strong>
+                <p>Ogni intervento è registrato in app: storico, referti e fatture sempre a portata di tap.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Phone mockup: schermata appuntamenti / calendario -->
+        <div class="app-sec__device" data-reveal>
+          <div class="phone phone--light">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="appbar appbar--light">
+                <span class="appbar__time">14:07</span>
+                <span class="appbar__status">
+                  <ion-icon name="cellular"></ion-icon>
+                  <ion-icon name="wifi"></ion-icon>
+                  <ion-icon name="battery-full"></ion-icon>
+                </span>
+              </div>
+              <div class="app app--light">
+                <p class="app__eyebrow app__eyebrow--dark">I miei appuntamenti</p>
+                <h3 class="app__hi app__hi--dark">Ciao, Infermiere 👋</h3>
+
+                <div class="cal">
+                  <div class="cal__head">
+                    <ion-icon name="chevron-back"></ion-icon>
+                    <span>Giugno 2026</span>
+                    <ion-icon name="chevron-forward"></ion-icon>
+                  </div>
+                  <div class="cal__grid">
+                    <span class="cal__d cal__d--mute">L</span><span class="cal__d cal__d--mute">M</span><span class="cal__d cal__d--mute">M</span><span class="cal__d cal__d--mute">G</span><span class="cal__d cal__d--mute">V</span><span class="cal__d cal__d--mute">S</span><span class="cal__d cal__d--mute">D</span>
+                    <span class="cal__d">1</span><span class="cal__d">2</span><span class="cal__d cal__d--on">3</span><span class="cal__d">4</span><span class="cal__d">5</span><span class="cal__d">6</span><span class="cal__d">7</span>
+                    <span class="cal__d">8</span><span class="cal__d">9</span><span class="cal__d">10</span><span class="cal__d">11</span><span class="cal__d">12</span><span class="cal__d">13</span><span class="cal__d">14</span>
+                  </div>
+                </div>
+
+                <div class="slot">
+                  <div class="slot__row">
+                    <span class="slot__label"><ion-icon name="calendar-outline"></ion-icon> Mercoledì 3 Giugno</span>
+                    <span class="slot__add">+ Disponibilità</span>
+                  </div>
+                  <div class="slot__chip">
+                    <span class="slot__dot"></span> Disponibile · 09.00 – 12.00
+                  </div>
+                </div>
+
+                <div class="app__tabbar app__tabbar--light">
+                  <span class="app__tab is-active"><ion-icon name="calendar"></ion-icon>Calendario</span>
+                  <span class="app__tab"><ion-icon name="medkit"></ion-icon>Interventi</span>
+                  <span class="app__tab"><ion-icon name="time"></ion-icon>Tempi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SICUREZZA / PAGAMENTO ============ -->
+    <section class="section section--dark section--pay" id="sicurezza">
+      <div class="container">
+        <div class="section__head section__head--center" data-reveal>
+          <h2 class="section__title">Paghi in app,<br /><span class="grad-text">in totale sicurezza.</span></h2>
+          <p class="section__intro">
+            Nessun contante, nessuna sorpresa. Il pagamento è gestito da Stripe e
+            l'importo viene addebitato solo a prestazione confermata.
+          </p>
+        </div>
+
+        <div class="pay-grid">
+          <article class="pay-card pay-card--wide" data-reveal>
+            <span class="pay-card__ic" style="--c:#1e4dff"><ion-icon name="card"></ion-icon></span>
+            <h3>Pagamento protetto end-to-end</h3>
+            <p>I dati della carta non transitano mai dai nostri server: il pagamento è gestito da Stripe con crittografia e protezione antifrode di livello bancario.</p>
+            <div class="pay-card__badges">
+              <span><ion-icon name="logo-stripe"></ion-icon> Stripe</span>
+              <span><ion-icon name="lock-closed"></ion-icon> Crittografia</span>
+              <span><ion-icon name="shield-checkmark"></ion-icon> 3D Secure</span>
+            </div>
+          </article>
+
+          <article class="pay-card" data-reveal>
+            <span class="pay-card__ic" style="--c:#01696f"><ion-icon name="checkmark-done"></ion-icon></span>
+            <h3>Paghi solo a servizio confermato</h3>
+            <p>L'addebito avviene quando l'infermiere accetta e la prestazione è confermata. Trasparenza totale, prima di ogni tap.</p>
+          </article>
+
+          <article class="pay-card" data-reveal>
+            <span class="pay-card__ic" style="--c:#5b46f0"><ion-icon name="receipt"></ion-icon></span>
+            <h3>Fatturazione in app</h3>
+            <p>Ricevuta e fattura generate automaticamente dopo ogni intervento, sempre disponibili nello storico.</p>
+          </article>
+
+          <article class="pay-card" data-reveal>
+            <span class="pay-card__ic" style="--c:#BE185D"><ion-icon name="flash"></ion-icon></span>
+            <h3>Payout record per gli infermieri</h3>
+            <p>I professionisti ricevono i compensi rapidamente e in modo tracciato, direttamente sul proprio conto.</p>
+          </article>
+
+          <article class="pay-card" data-reveal>
+            <span class="pay-card__ic" style="--c:#059669"><ion-icon name="pricetags"></ion-icon></span>
+            <h3>Commissioni trasparenti</h3>
+            <p>Una piccola commissione di servizio, sempre visibile prima di confermare. Nessun costo nascosto, mai.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / CONTATTI ============ -->
+    <section class="section section--cta" id="contatti">
+      <div class="cta__bg" aria-hidden="true">
+        <div class="aurora aurora--1"></div>
+        <div class="aurora aurora--2"></div>
+      </div>
+      <div class="container cta" data-reveal>
+        <span class="badge"><span class="badge__dot"></span> Start Cup Lazio 2026</span>
+        <h2 class="cta__title">Prenota un infermiere,<br /><span class="grad-text">quando serve davvero.</span></h2>
+        <p class="cta__lead">
+          Helpy porta cure infermieristiche certificate direttamente a casa tua, in pochi tap.
+          Hai domande o vuoi saperne di più? <strong>Scrivici, ti rispondiamo noi.</strong>
+        </p>
+        <div class="cta__actions">
+          <a href="mailto:helpyteam.info@gmail.com" class="btn btn--primary btn--lg">
+            <ion-icon name="mail"></ion-icon>
+            helpyteam.info@gmail.com
+          </a>
+          <a href="#servizi" class="btn btn--ghost btn--lg">Esplora il servizio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="brand">
+          <img src="assets/logo.png" alt="" class="brand__mark" width="36" height="36" />
+          <span class="brand__name">Helpy</span>
+        </a>
+        <p>Prenotare un infermiere a domicilio non è mai stato così semplice.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Sezioni">
+        <h4>Prodotto</h4>
+        <a href="#problema">Il problema</a>
+        <a href="#soluzione">La soluzione</a>
+        <a href="#servizi">I servizi</a>
+        <a href="#app">L'app</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Azienda">
+        <h4>Azienda</h4>
+        <a href="#sicurezza">Sicurezza</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Scrivici</h4>
+        <a href="mailto:helpyteam.info@gmail.com">helpyteam.info@gmail.com</a>
+        <p class="footer__muted">Roma · Lazio, Italia</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Helpy. Tutti i diritti riservati.</span>
+      <span class="footer__muted">Start Cup Lazio 2026</span>
+    </div>
+  </footer>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
