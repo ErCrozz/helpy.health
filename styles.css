@@ -850,6 +850,41 @@ body.menu-open { overflow: hidden; }
 }
 .app-sec__device:hover .phone { transform: rotateY(3deg) rotateX(2deg); }
 
+/* Badge "presto negli store" */
+.stores { margin-top: 2.4rem; }
+.stores__soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--teal);
+  background: color-mix(in srgb, var(--teal) 9%, transparent);
+  border: 1px solid color-mix(in srgb, var(--teal) 22%, transparent);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.stores__soon ion-icon { font-size: 1.05rem; }
+.stores__badges { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #0c1024;
+  color: #fff;
+  border-radius: 14px;
+  padding: 0.55rem 1.15rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s;
+  cursor: default;
+}
+.store-badge:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.store-badge > ion-icon { font-size: 1.85rem; }
+.store-badge__txt { display: flex; flex-direction: column; line-height: 1.12; }
+.store-badge__txt small { font-size: 0.62rem; letter-spacing: 0.03em; opacity: 0.85; }
+.store-badge__txt strong { font-size: 1.05rem; font-weight: 700; letter-spacing: 0.01em; }
+
 /* ---------- PAY ---------- */
 .section--pay {
   background:
