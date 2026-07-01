@@ -1,0 +1,5 @@
+# robots.txt — Helpy
+User-agent: *
+Allow: /
+
+Sitemap: https://helpy.health/sitemap.xml
