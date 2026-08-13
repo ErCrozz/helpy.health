@@ -65,3 +65,7 @@ Poi visita `http://localhost:5500`.
   `lib/constants.ts` dell'app Helpy. Se aggiorni il catalogo nell'app,
   allinea qui icone/colori/durate.
 - **Contatti**: email `helpyteam.info@gmail.com` (cerca `mailto:` nell'HTML).
+- **Logo/asset**: `netlify.toml` mette `max-age=31536000` su `/assets/*`. Se
+  sostituisci un'immagine mantenendo lo stesso nome file, incrementa il
+  `?v=` nei riferimenti in `index.html`, altrimenti i browser continuano a
+  servire la versione vecchia dalla cache.
