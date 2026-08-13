@@ -24,7 +24,11 @@ Sito **statico**, zero build step:
 - `index.html` — struttura e contenuti
 - `styles.css` — design system (palette del logo + app, dark hero, bento grid, animazioni)
 - `script.js` — scroll progress, reveal allo scroll, contatori animati, menu mobile, nav attiva
-- `assets/` — logo e favicon (presi dall'app)
+- `assets/` — icone del brand, generate da `nuovologo.jpg`:
+  `logo.png` (nav/footer, angoli trasparenti), `favicon.png`,
+  `apple-touch-icon.png` (fondo pieno, iOS applica la sua maschera),
+  `og-image.png` (1200×630 per anteprime social), `logo-symbol.png`
+  (solo simbolo su trasparenza, per usi futuri)
 
 Dipendenze caricate da CDN: **Google Fonts** (Anton + Space Grotesk) e
 **Ionicons** (stesse icone dell'app). Serve quindi connessione internet
