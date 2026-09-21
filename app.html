@@ -41,7 +41,6 @@
 
       <nav class="nav__links" id="navLinks" aria-label="Navigazione principale">
         <a href="/chi-siamo">Chi siamo</a>
-        <a href="/#servizi">Servizi</a>
         <a href="/app">L'app</a>
         <a href="/contatti" class="btn btn--primary btn--sm nav__cta">Contattaci</a>
       </nav>
@@ -73,8 +72,79 @@
       </div>
     </section>
 
+    <!-- ============ SERVIZI ============ -->
+    <section class="section section--dark" id="servizi">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <h2 class="section__title">Interventi rapidi,<br /><span class="grad-text">a casa tua.</span></h2>
+          <p class="section__intro">
+            Nove prestazioni infermieristiche eseguite a domicilio da professionisti
+            certificati e assicurati. Il materiale necessario è sempre compreso
+            nel prezzo che vedi.
+          </p>
+        </div>
+
+        <div class="bento">
+          <article class="svc" style="--c:#DC2626" data-reveal>
+            <span class="svc__ic"><ion-icon name="water"></ion-icon></span>
+            <h3>Prelievo Sangue</h3>
+            <p>Prelievo ematico venoso per analisi di laboratorio, con consegna dei campioni al laboratorio convenzionato.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~30 min</span>
+          </article>
+          <article class="svc" style="--c:#EA580C" data-reveal>
+            <span class="svc__ic"><ion-icon name="flash"></ion-icon></span>
+            <h3>Prelievo Urgente</h3>
+            <p>Prelievo con ritiro e consegna rapida al laboratorio, disponibile entro 2 ore dalla prenotazione.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~30 min</span>
+          </article>
+          <article class="svc" style="--c:#7C3AED" data-reveal>
+            <span class="svc__ic"><ion-icon name="fitness"></ion-icon></span>
+            <h3>Iniezione Intramuscolo</h3>
+            <p>Somministrazione di iniezioni intramuscolari con monitoraggio post-somministrazione.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~20 min</span>
+          </article>
+          <article class="svc" style="--c:#2563EB" data-reveal>
+            <span class="svc__ic"><ion-icon name="pulse"></ion-icon></span>
+            <h3>Iniezione Diabete</h3>
+            <p>Somministrazione di insulina, misurazione della glicemia ed educazione all'autogestione.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~20 min</span>
+          </article>
+          <article class="svc" style="--c:#059669" data-reveal>
+            <span class="svc__ic"><ion-icon name="bandage"></ion-icon></span>
+            <h3>Medicazione Semplice</h3>
+            <p>Medicazione di ferite superficiali, punti di sutura e piccole lesioni, con bendaggio appropriato.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~30 min</span>
+          </article>
+          <article class="svc" style="--c:#0891B2" data-reveal>
+            <span class="svc__ic"><ion-icon name="medkit"></ion-icon></span>
+            <h3>Medicazione Avanzata</h3>
+            <p>Medicazioni complesse per ulcere e piaghe da decubito con presidi avanzati secondo protocollo medico.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~45 min</span>
+          </article>
+          <article class="svc" style="--c:#4F46E5" data-reveal>
+            <span class="svc__ic"><ion-icon name="water-outline"></ion-icon></span>
+            <h3>Infusione IV</h3>
+            <p>Terapia endovenosa a domicilio con posizionamento dell'accesso venoso e monitoraggio dei parametri vitali.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~60 min</span>
+          </article>
+          <article class="svc" style="--c:#BE185D" data-reveal>
+            <span class="svc__ic"><ion-icon name="diamond"></ion-icon></span>
+            <h3>Infusione Elite</h3>
+            <p>Infusioni premium: flebo vitaminiche, terapie reidratanti e personalizzate con assistenza dedicata.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~90 min</span>
+          </article>
+          <article class="svc" style="--c:#E11D48" data-reveal>
+            <span class="svc__ic"><ion-icon name="heart"></ion-icon></span>
+            <h3>ECG Domiciliare</h3>
+            <p>Elettrocardiogramma a 12 derivazioni con apparecchiatura portatile e refertazione del cardiologo.</p>
+            <span class="svc__time"><ion-icon name="time-outline"></ion-icon> ~30 min</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ PER I PAZIENTI ============ -->
-    <section class="section section--dark" id="pazienti">
+    <section class="section section--light" id="pazienti">
       <div class="container app-sec">
         <div class="app-sec__copy" data-reveal>
           <p class="page-hero__eyebrow">
@@ -118,7 +188,7 @@
           </ul>
         </div>
 
-        <!-- Phone mockup: schermata "I nostri servizi" -->
+        <!-- Phone mockup: elenco infermieri con valutazione, distanza e prezzo -->
         <div class="app-sec__device" data-reveal>
           <div class="phone">
             <div class="phone__notch"></div>
@@ -133,22 +203,45 @@
               </div>
 
               <div class="app">
-                <p class="app__eyebrow">I nostri servizi</p>
-                <h3 class="app__hi">Ciao, Paziente 👋</h3>
-                <p class="app__sub">Di quale servizio hai bisogno oggi?</p>
+                <p class="app__eyebrow">Prelievo Sangue · ~30 min</p>
+                <h3 class="app__hi">Infermieri vicino a te</h3>
 
-                <div class="app__grid">
-                  <div class="tile" style="--c:#DC2626"><span class="tile__ic"><ion-icon name="water"></ion-icon></span>Prelievo Sangue</div>
-                  <div class="tile" style="--c:#EA580C"><span class="tile__ic"><ion-icon name="flash"></ion-icon></span>Prelievo Urgente</div>
-                  <div class="tile" style="--c:#7C3AED"><span class="tile__ic"><ion-icon name="fitness"></ion-icon></span>Intramuscolo</div>
-                  <div class="tile" style="--c:#2563EB"><span class="tile__ic"><ion-icon name="pulse"></ion-icon></span>Iniez. Diabete</div>
-                  <div class="tile" style="--c:#059669"><span class="tile__ic"><ion-icon name="bandage"></ion-icon></span>Medicazione</div>
-                  <div class="tile" style="--c:#BE185D"><span class="tile__ic"><ion-icon name="diamond"></ion-icon></span>Infusione Elite</div>
+                <div class="nchips">
+                  <span class="nchip is-on">Disponibili ora</span>
+                  <span class="nchip">Vicino a me</span>
+                  <span class="nchip">Top rated</span>
+                </div>
+
+                <div class="nlist">
+                  <div class="nrow">
+                    <span class="nrow__av">MR</span>
+                    <div class="nrow__info">
+                      <strong>Marco R.</strong>
+                      <small><ion-icon name="star"></ion-icon> 4.9 · 800 m da te</small>
+                    </div>
+                    <span class="nrow__price">28 €</span>
+                  </div>
+                  <div class="nrow">
+                    <span class="nrow__av">LB</span>
+                    <div class="nrow__info">
+                      <strong>Laura B.</strong>
+                      <small><ion-icon name="star"></ion-icon> 5.0 · 1,2 km da te</small>
+                    </div>
+                    <span class="nrow__price">32 €</span>
+                  </div>
+                  <div class="nrow">
+                    <span class="nrow__av">AV</span>
+                    <div class="nrow__info">
+                      <strong>Anna V.</strong>
+                      <small><ion-icon name="star"></ion-icon> 4.8 · 1,5 km da te</small>
+                    </div>
+                    <span class="nrow__price">25 €</span>
+                  </div>
                 </div>
 
                 <div class="app__tabbar">
-                  <span class="app__tab is-active"><ion-icon name="grid"></ion-icon>Servizi</span>
-                  <span class="app__tab"><ion-icon name="people"></ion-icon>Infermieri</span>
+                  <span class="app__tab"><ion-icon name="grid"></ion-icon>Servizi</span>
+                  <span class="app__tab is-active"><ion-icon name="people"></ion-icon>Infermieri</span>
                   <span class="app__tab"><ion-icon name="calendar"></ion-icon>Prenotazioni</span>
                 </div>
               </div>
@@ -159,7 +252,7 @@
     </section>
 
     <!-- ============ PER GLI INFERMIERI ============ -->
-    <section class="section section--light" id="infermieri">
+    <section class="section section--dark" id="infermieri">
       <div class="container app-sec">
         <!-- Phone mockup: calendario infermiere -->
         <div class="app-sec__device" data-reveal>
@@ -400,7 +493,7 @@
 
       <nav class="footer__col" aria-label="Prodotto">
         <h4>Prodotto</h4>
-        <a href="/#servizi">I servizi</a>
+        <a href="/app#servizi">I servizi</a>
         <a href="/app">L'app</a>
         <a href="/app#infermieri">Per gli infermieri</a>
         <a href="/app#sicurezza">Sicurezza e pagamenti</a>

@@ -1773,3 +1773,87 @@ a.ccard:hover { transform: translateY(-3px); border-color: var(--blue); }
 @media (max-width: 640px) {
   .contact-cards--grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- Card "porta": una .value che è anche un link ---------- */
+a.value { display: block; }
+.value__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+.value__more ion-icon { transition: transform 0.3s var(--ease); }
+a.value:hover .value__more ion-icon { transform: translateX(4px); }
+
+/* ---------- Mockup: elenco infermieri con prezzo ---------- */
+.nchips {
+  display: flex;
+  gap: 0.35rem;
+  margin: 0.55rem 0 0.7rem;
+}
+.nchip {
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: #6b7392;
+  background: #fff;
+  border: 1px solid #eef1f8;
+  border-radius: 999px;
+  padding: 0.3rem 0.55rem;
+  white-space: nowrap;
+}
+.nchip.is-on {
+  color: #fff;
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.nlist {
+  display: grid;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+.nrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fff;
+  border: 1px solid #eef1f8;
+  border-radius: 16px;
+  padding: 0.6rem 0.7rem;
+  box-shadow: 0 10px 22px -14px rgba(16, 24, 64, 0.18);
+}
+.nrow__av {
+  width: 32px; height: 32px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--grad-brand);
+}
+.nrow__info { flex: 1; min-width: 0; }
+.nrow__info strong {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #2a3150;
+}
+.nrow__info small {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.58rem;
+  color: #9aa2ba;
+}
+.nrow__info small ion-icon { font-size: 0.68rem; color: #f5a623; }
+.nrow__price {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--blue);
+  white-space: nowrap;
+}

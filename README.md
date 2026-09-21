@@ -7,9 +7,9 @@ l'assistenza infermieristica a domicilio (Start Cup Lazio 2026).
 
 | URL | File | Contenuto |
 |---|---|---|
-| `/` | `index.html` | Hero, il problema in 4 numeri, i 3 passaggi, i 9 servizi, teaser su chi siamo e sull'app |
-| `/chi-siamo` | `chi-siamo.html` | La storia, il problema esteso, missione e visione, i 3 principi, il team, i traguardi, la roadmap delle microzone |
-| `/app` | `app.html` | Per i pazienti, per gli infermieri, sicurezza e pagamenti, disponibilità |
+| `/` | `index.html` | Landing minimale: hero, marquee, i 3 passaggi, tre porte verso le altre pagine, CTA |
+| `/chi-siamo` | `chi-siamo.html` | La storia, il problema, missione e visione, i 3 principi, chi c'è dietro, i traguardi, la roadmap delle microzone |
+| `/app` | `app.html` | Le 9 prestazioni, per i pazienti, per gli infermieri, sicurezza e pagamenti, disponibilità |
 | `/contatti` | `contatti.html` | Contatti diretti via email, blocchi infermieri/strutture, FAQ |
 
 Netlify serve `nome.html` anche su `/nome`: i link interni usano quindi la
@@ -86,8 +86,12 @@ Sito statico: si pubblica ovunque trascinando la cartella.
 - **Colori**: tutte le variabili sono in cima a `styles.css` (`:root`).
   - `--blue` blu del logo · `--indigo`/`--violet` accenti · `--teal` alias legacy = `--blue`.
 - **Contenuti**: testi direttamente nei file HTML.
-- **Servizi**: la griglia in `#servizi` rispecchia `lib/constants.ts` dell'app
-  Helpy. Se aggiorni il catalogo nell'app, allinea qui icone/colori/durate.
+- **Servizi**: la griglia in `/app#servizi` rispecchia `lib/constants.ts`
+  dell'app Helpy. Se aggiorni il catalogo nell'app, allinea qui
+  icone/colori/durate.
+- **Niente ripetizioni**: ogni contenuto sta su una pagina sola, e la home
+  rimanda alle altre senza riassumerle. Prima di aggiungere un blocco alla
+  home, controlla che non esista già altrove.
 - **Nav e footer**: sono duplicati in ogni pagina. Se ne modifichi uno,
   allinea gli altri quattro.
 - **Contatti**: email `helpyteam.info@gmail.com` (cerca `mailto:` nei file).
