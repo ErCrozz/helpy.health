@@ -1,5 +1,5 @@
 /* =========================================================
-   HELPY — Landing interactions
+   HELPY — Interazioni condivise fra le pagine
    ========================================================= */
 (function () {
   "use strict";
@@ -25,7 +25,6 @@
   /* ---------- Mobile menu ---------- */
   const toggle = document.getElementById("navToggle");
   const links = document.getElementById("navLinks");
-
   const scrim = document.getElementById("navScrim");
 
   function closeMenu() {
@@ -47,15 +46,33 @@
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Chiudi menu" : "Apri menu");
     });
-    // Chiudi al tap su un link
     links.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", closeMenu);
     });
-    // Chiudi al tap sull'overlay
     if (scrim) scrim.addEventListener("click", closeMenu);
-    // Chiudi con Escape
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeMenu();
+    });
+  }
+
+  /* ---------- Link di nav corrispondente alla pagina aperta ----------
+     Netlify serve /chi-siamo.html anche su /chi-siamo: normalizziamo
+     togliendo l'estensione e la barra finale prima di confrontare. */
+  function normalizePath(path) {
+    return path.replace(/\.html$/, "").replace(/\/+$/, "") || "/";
+  }
+
+  const currentPath = normalizePath(window.location.pathname);
+
+  if (links) {
+    links.querySelectorAll("a[href]").forEach(function (a) {
+      const url = new URL(a.getAttribute("href"), window.location.origin);
+      // I link con solo ancora (es. /#servizi) restano gestiti dallo scroll-spy
+      if (url.hash && normalizePath(url.pathname) === currentPath) return;
+      if (normalizePath(url.pathname) === currentPath) {
+        a.classList.add("is-current");
+        if (currentPath !== "/") a.setAttribute("aria-current", "page");
+      }
     });
   }
 
@@ -67,7 +84,6 @@
   } else {
     const io = new IntersectionObserver(
       function (entries, obs) {
-        // Group entries by parent so siblings stagger nicely
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
           const el = entry.target;
@@ -104,7 +120,6 @@
     const start = performance.now();
     function tick(now) {
       const t = Math.min((now - start) / duration, 1);
-      // easeOutExpo
       const eased = t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
       const value = target * eased;
       el.textContent = prefix + value.toFixed(decimals) + suffix;
@@ -133,27 +148,122 @@
     });
   }
 
-  /* ---------- Active nav link on scroll ---------- */
-  const sections = ["problema", "soluzione", "servizi", "app", "sicurezza"]
-    .map(function (id) { return document.getElementById(id); })
-    .filter(Boolean);
-  const navAnchors = links
-    ? Array.from(links.querySelectorAll('a[href^="#"]'))
+  /* ---------- Scroll-spy sulle ancore della pagina corrente ---------- */
+  const anchorLinks = links
+    ? Array.from(links.querySelectorAll('a[href*="#"]')).filter(function (a) {
+        const url = new URL(a.getAttribute("href"), window.location.origin);
+        return url.hash && normalizePath(url.pathname) === currentPath;
+      })
     : [];
 
-  if (sections.length && navAnchors.length && "IntersectionObserver" in window) {
-    const so = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          const id = entry.target.id;
-          navAnchors.forEach(function (a) {
-            a.classList.toggle("is-active", a.getAttribute("href") === "#" + id);
+  if (anchorLinks.length && "IntersectionObserver" in window) {
+    const targets = anchorLinks
+      .map(function (a) {
+        const id = new URL(a.getAttribute("href"), window.location.origin).hash.slice(1);
+        return document.getElementById(id);
+      })
+      .filter(Boolean);
+
+    if (targets.length) {
+      const so = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            const id = entry.target.id;
+            anchorLinks.forEach(function (a) {
+              const hash = new URL(a.getAttribute("href"), window.location.origin).hash;
+              a.classList.toggle("is-active", hash === "#" + id);
+            });
           });
+        },
+        { rootMargin: "-45% 0px -50% 0px" }
+      );
+      targets.forEach(function (s) { so.observe(s); });
+    }
+  }
+
+  /* ---------- FAQ: apre una voce per volta ---------- */
+  const faqItems = Array.from(document.querySelectorAll(".faq__item"));
+  faqItems.forEach(function (item) {
+    item.addEventListener("toggle", function () {
+      if (!item.open) return;
+      faqItems.forEach(function (other) {
+        if (other !== item) other.open = false;
+      });
+    });
+  });
+
+  /* ---------- Form contatti (Netlify Forms via AJAX) ----------
+     Dormiente: il form è stato tolto da contatti.html in attesa del lancio,
+     perché raccogliere dati richiede un'informativa privacy pubblicata.
+     Questo blocco resta pronto — al lancio basta rimettere il markup del
+     form (con id="contactForm") e ricomincia a funzionare da solo. */
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+
+  if (form) {
+    // Precompila il motivo da ?motivo=... (usato dai link "Candidati" / "Diventa partner")
+    const motivo = form.querySelector("#motivo");
+    const requested = new URLSearchParams(window.location.search).get("motivo");
+    if (motivo && requested) {
+      const match = Array.from(motivo.options).some(function (o) { return o.value === requested; });
+      if (match) motivo.value = requested;
+    }
+
+    // Bottoni interni alla pagina che preselezionano il motivo
+    document.querySelectorAll("[data-prefill]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        if (!motivo) return;
+        motivo.value = btn.getAttribute("data-prefill");
+        motivo.dispatchEvent(new Event("change", { bubbles: true }));
+      });
+    });
+
+    form.addEventListener("submit", function (e) {
+      // Senza fetch lasciamo il POST nativo: Netlify mostra la sua pagina di conferma
+      if (!window.fetch) return;
+
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const data = new FormData(form);
+
+      if (status) {
+        status.className = "form__status";
+        status.textContent = "";
+      }
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = "0.6";
+      }
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString(),
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          form.reset();
+          if (status) {
+            status.className = "form__status is-ok";
+            status.textContent =
+              "Messaggio inviato. Ti rispondiamo entro 24 ore nei giorni lavorativi.";
+          }
+        })
+        .catch(function () {
+          if (status) {
+            status.className = "form__status is-err";
+            status.innerHTML =
+              'Invio non riuscito. Scrivici direttamente a ' +
+              '<a href="mailto:helpyteam.info@gmail.com">helpyteam.info@gmail.com</a>.';
+          }
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "";
+          }
         });
-      },
-      { rootMargin: "-45% 0px -50% 0px" }
-    );
-    sections.forEach(function (s) { so.observe(s); });
+    });
   }
 })();

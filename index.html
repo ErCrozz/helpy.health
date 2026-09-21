@@ -20,15 +20,15 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="canonical" href="https://helpy.health/" />
-  <link rel="icon" type="image/png" href="assets/favicon.png?v=2" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="/assets/favicon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <!-- Scroll progress -->
@@ -40,18 +40,16 @@
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
-      <a href="#top" class="brand" aria-label="Helpy — home">
-        <img src="assets/logo.png?v=2" alt="" class="brand__mark" width="40" height="40" />
+      <a href="/" class="brand" aria-label="Helpy — home">
+        <img src="/assets/logo.png?v=2" alt="" class="brand__mark" width="40" height="40" />
         <span class="brand__name">Helpy</span>
       </a>
 
       <nav class="nav__links" id="navLinks" aria-label="Navigazione principale">
-        <a href="#problema">Il problema</a>
-        <a href="#soluzione">Soluzione</a>
-        <a href="#servizi">Servizi</a>
-        <a href="#app">L'app</a>
-        <a href="#sicurezza">Sicurezza</a>
-        <a href="#contatti" class="btn btn--primary btn--sm nav__cta">Contattaci</a>
+        <a href="/chi-siamo">Chi siamo</a>
+        <a href="/#servizi">Servizi</a>
+        <a href="/app">L'app</a>
+        <a href="/contatti" class="btn btn--primary btn--sm nav__cta">Contattaci</a>
       </nav>
 
       <button class="nav__toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
@@ -88,7 +86,7 @@
               Scopri i servizi
               <ion-icon name="arrow-forward"></ion-icon>
             </a>
-            <a href="#app" class="btn btn--ghost btn--lg">
+            <a href="/app" class="btn btn--ghost btn--lg">
               <ion-icon name="play-circle-outline"></ion-icon>
               Come funziona
             </a>
@@ -96,7 +94,7 @@
 
           <ul class="hero__trust" data-reveal>
             <li><ion-icon name="shield-checkmark"></ion-icon> Infermieri certificati</li>
-            <li><ion-icon name="ribbon"></ion-icon> Copertura assicurativa</li>
+            <li><ion-icon name="ribbon"></ion-icon> Verificati e assicurati</li>
             <li><ion-icon name="lock-closed"></ion-icon> Pagamenti protetti</li>
           </ul>
         </div>
@@ -179,7 +177,7 @@
       </div>
     </div>
 
-    <!-- ============ PROBLEMA ============ -->
+    <!-- ============ PROBLEMA (sintesi — approfondimento su /chi-siamo) ============ -->
     <section class="section section--dark" id="problema">
       <div class="container">
         <div class="section__head" data-reveal>
@@ -211,53 +209,11 @@
       </div>
     </section>
 
-    <!-- ============ PRONTO SOCCORSO ============ -->
-    <section class="section section--er">
-      <div class="container er">
-        <div class="er__main" data-reveal>
-          <p class="er__big">
-            Meno del <span class="grad-text">5%</span> degli over 65 riceve assistenza
-            domiciliare pubblica strutturata (AIDOMUS-IT, 2024): le complicanze gestibili a casa
-            finiscono in <span class="grad-text">pronto soccorso</span>.
-          </p>
-          <p class="er__note">
-            Ogni rientro evitabile è un letto di pronto soccorso occupato, un costo per
-            il sistema e un rischio per il paziente. I pronto soccorso sono saturi proprio
-            di ciò che si potrebbe curare a casa.
-          </p>
-        </div>
-
-        <ul class="er__list">
-          <li data-reveal>
-            <span class="er__ic"><ion-icon name="trending-up-outline"></ion-icon></span>
-            <div>
-              <strong>Rischio di riacutizzazioni cliniche</strong>
-              <p>Senza monitoraggio, piccole complicanze degenerano in emergenze.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="er__ic"><ion-icon name="time-outline"></ion-icon></span>
-            <div>
-              <strong>Nessun follow-up dopo la dimissione</strong>
-              <p>Il paziente rientra a casa senza una rete di assistenza continua.</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="er__ic"><ion-icon name="battery-dead-outline"></ion-icon></span>
-            <div>
-              <strong>Burnout totale del caregiver</strong>
-              <p>Le famiglie sostengono da sole un carico assistenziale insostenibile.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
     <!-- ============ SOLUZIONE ============ -->
     <section class="section section--light" id="soluzione">
       <div class="container">
         <div class="section__head section__head--center" data-reveal>
-          <h2 class="section__title section__title--dark">La piattaforma B2B2C<br />on-demand per l'assistenza domiciliare.</h2>
+          <h2 class="section__title section__title--dark">La piattaforma on-demand<br />per l'assistenza domiciliare.</h2>
           <p class="section__intro section__intro--dark">
             Helpy porta l'infermiere a casa del paziente in tre passaggi.
             Niente attese, niente burocrazia: solo cura, quando serve.
@@ -294,7 +250,8 @@
           <h2 class="section__title">Interventi rapidi,<br /><span class="grad-text">a casa tua.</span></h2>
           <p class="section__intro">
             Nove prestazioni infermieristiche eseguite a domicilio da professionisti
-            certificati e assicurati. Tutto il materiale è incluso.
+            certificati e assicurati. Il materiale necessario è sempre compreso
+            nel prezzo che vedi.
           </p>
         </div>
 
@@ -357,12 +314,52 @@
       </div>
     </section>
 
-    <!-- ============ APP / COME FUNZIONA ============ -->
-    <section class="section section--light" id="app">
+    <!-- ============ TEASER CHI SIAMO ============ -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="teaser" data-reveal>
+          <div>
+            <h2 class="teaser__title">Perché<br />esiste Helpy</h2>
+            <p>
+              Per ordinare la cena esiste un'app. Per far entrare un infermiere in casa
+              di tua madre, no: si torna al passaparola, e ogni volta si riparte da zero
+              nel momento peggiore. Helpy è stata pensata da un infermiere che quel vuoto
+              lo vede da due lati — l'assistenza a domicilio e l'emergenza in ambulanza.
+              <strong>Le prestazioni del catalogo le ha scelte chi le esegue.</strong>
+            </p>
+            <a href="/chi-siamo" class="btn btn--primary btn--lg">
+              La nostra storia
+              <ion-icon name="arrow-forward"></ion-icon>
+            </a>
+          </div>
+          <ul class="aud__list">
+            <li>
+              <ion-icon name="checkmark-circle"></ion-icon>
+              Infermieri verificati: albo e assicurazione controllati uno per uno
+            </li>
+            <li>
+              <ion-icon name="checkmark-circle"></ion-icon>
+              Prezzo noto e orario confermato, prima ancora di prenotare
+            </li>
+            <li>
+              <ion-icon name="checkmark-circle"></ion-icon>
+              Solo prestazioni eseguibili a casa in sicurezza, scelte da chi le fa
+            </li>
+            <li>
+              <ion-icon name="checkmark-circle"></ion-icon>
+              Si parte da EUR e Torrino, a gennaio 2027
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEASER APP ============ -->
+    <section class="section section--dark" id="app">
       <div class="container app-sec">
         <div class="app-sec__copy" data-reveal>
-          <h2 class="section__title section__title--dark">Semplice<br />come deve essere.</h2>
-          <p class="section__intro section__intro--dark">
+          <h2 class="section__title">Semplice<br /><span class="grad-text">come deve essere.</span></h2>
+          <p class="section__intro">
             Un'esperienza pensata per chi ha bisogno di cure, non di complicazioni.
             Dalla ricerca al pagamento, tutto in un'unica app.
           </p>
@@ -383,33 +380,23 @@
               </div>
             </li>
             <li>
-              <span class="feats__ic" style="--c:#0E33A9"><ion-icon name="notifications"></ion-icon></span>
+              <span class="feats__ic" style="--c:#0E33A9"><ion-icon name="lock-closed"></ion-icon></span>
               <div>
-                <strong>Notifiche in tempo reale</strong>
-                <p>Conferme, promemoria e aggiornamenti sullo stato della prestazione, momento per momento.</p>
-              </div>
-            </li>
-            <li>
-              <span class="feats__ic" style="--c:#DC2626"><ion-icon name="document-text"></ion-icon></span>
-              <div>
-                <strong>Cura tracciata e documentata</strong>
-                <p>Ogni intervento è registrato in app: storico, referti e fatture sempre a portata di tap.</p>
+                <strong>Pagamenti protetti</strong>
+                <p>Gestiti da Stripe, addebitati solo a prestazione confermata, con fattura detraibile in app.</p>
               </div>
             </li>
           </ul>
 
-          <div class="stores">
-            <span class="stores__soon"><ion-icon name="rocket-outline"></ion-icon> Presto disponibile negli store</span>
-            <div class="stores__badges">
-              <span class="store-badge" role="img" aria-label="App Store — presto disponibile">
-                <ion-icon name="logo-apple"></ion-icon>
-                <span class="store-badge__txt"><small>Scarica su</small><strong>App Store</strong></span>
-              </span>
-              <span class="store-badge" role="img" aria-label="Google Play — presto disponibile">
-                <ion-icon name="logo-google-playstore"></ion-icon>
-                <span class="store-badge__txt"><small>Disponibile su</small><strong>Google Play</strong></span>
-              </span>
-            </div>
+          <div class="hero__actions">
+            <a href="/app" class="btn btn--primary btn--lg">
+              Scopri l'app
+              <ion-icon name="arrow-forward"></ion-icon>
+            </a>
+            <a href="/app#infermieri" class="btn btn--ghost btn--lg">
+              <ion-icon name="medkit-outline"></ion-icon>
+              Sei un infermiere?
+            </a>
           </div>
         </div>
 
@@ -433,7 +420,7 @@
                 <div class="cal">
                   <div class="cal__head">
                     <ion-icon name="chevron-back"></ion-icon>
-                    <span>Giugno 2026</span>
+                    <span>Gennaio 2027</span>
                     <ion-icon name="chevron-forward"></ion-icon>
                   </div>
                   <div class="cal__grid">
@@ -445,7 +432,7 @@
 
                 <div class="slot">
                   <div class="slot__row">
-                    <span class="slot__label"><ion-icon name="calendar-outline"></ion-icon> Mercoledì 3 Giugno</span>
+                    <span class="slot__label"><ion-icon name="calendar-outline"></ion-icon> Domenica 3 Gennaio</span>
                     <span class="slot__add">+ Disponibilità</span>
                   </div>
                   <div class="slot__chip">
@@ -465,56 +452,6 @@
       </div>
     </section>
 
-    <!-- ============ SICUREZZA / PAGAMENTO ============ -->
-    <section class="section section--dark section--pay" id="sicurezza">
-      <div class="container">
-        <div class="section__head section__head--center" data-reveal>
-          <h2 class="section__title">Paghi in app,<br /><span class="grad-text">in totale sicurezza.</span></h2>
-          <p class="section__intro">
-            Nessun contante, nessuna sorpresa. Il pagamento è gestito da Stripe e
-            l'importo viene addebitato solo a prestazione confermata.
-          </p>
-        </div>
-
-        <div class="pay-grid">
-          <article class="pay-card pay-card--wide" data-reveal>
-            <span class="pay-card__ic" style="--c:#0E33A9"><ion-icon name="card"></ion-icon></span>
-            <h3>Pagamento protetto end-to-end</h3>
-            <p>I dati della carta non transitano mai dai nostri server: il pagamento è gestito da Stripe con crittografia e protezione antifrode di livello bancario.</p>
-            <div class="pay-card__badges">
-              <span><ion-icon name="card-outline"></ion-icon> Stripe</span>
-              <span><ion-icon name="lock-closed"></ion-icon> Crittografia</span>
-              <span><ion-icon name="shield-checkmark"></ion-icon> 3D Secure</span>
-            </div>
-          </article>
-
-          <article class="pay-card" data-reveal>
-            <span class="pay-card__ic" style="--c:#0E33A9"><ion-icon name="checkmark-done"></ion-icon></span>
-            <h3>Paghi solo a servizio confermato</h3>
-            <p>L'addebito avviene quando l'infermiere accetta e la prestazione è confermata. Trasparenza totale, prima di ogni tap.</p>
-          </article>
-
-          <article class="pay-card" data-reveal>
-            <span class="pay-card__ic" style="--c:#5b46f0"><ion-icon name="receipt"></ion-icon></span>
-            <h3>Fatturazione in app</h3>
-            <p>Ricevuta e fattura generate automaticamente dopo ogni intervento, sempre disponibili nello storico.</p>
-          </article>
-
-          <article class="pay-card" data-reveal>
-            <span class="pay-card__ic" style="--c:#BE185D"><ion-icon name="flash"></ion-icon></span>
-            <h3>Payout record per gli infermieri</h3>
-            <p>I professionisti ricevono i compensi rapidamente e in modo tracciato, direttamente sul proprio conto.</p>
-          </article>
-
-          <article class="pay-card" data-reveal>
-            <span class="pay-card__ic" style="--c:#059669"><ion-icon name="pricetags"></ion-icon></span>
-            <h3>Commissioni trasparenti</h3>
-            <p>Una piccola commissione di servizio, sempre visibile prima di confermare. Nessun costo nascosto, mai.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- ============ CTA / CONTATTI ============ -->
     <section class="section section--cta" id="contatti">
       <div class="cta__bg" aria-hidden="true">
@@ -524,15 +461,16 @@
       <div class="container cta" data-reveal>
         <h2 class="cta__title">Prenota un infermiere,<br /><span class="grad-text">quando serve davvero.</span></h2>
         <p class="cta__lead">
-          Helpy porta cure infermieristiche certificate direttamente a casa tua, in pochi tap.
-          Hai domande o vuoi saperne di più? <strong>Scrivici, ti rispondiamo noi.</strong>
+          Helpy parte da EUR e Torrino a gennaio 2027. Vuoi essere avvisato al lancio,
+          candidarti come infermiere o diventare partner?
+          <strong>Scrivici, ti rispondiamo noi.</strong>
         </p>
         <div class="cta__actions">
-          <a href="mailto:helpyteam.info@gmail.com" class="btn btn--primary btn--lg">
+          <a href="/contatti" class="btn btn--primary btn--lg">
             <ion-icon name="mail"></ion-icon>
-            helpyteam.info@gmail.com
+            Contattaci
           </a>
-          <a href="#servizi" class="btn btn--ghost btn--lg">Esplora il servizio</a>
+          <a href="/chi-siamo" class="btn btn--ghost btn--lg">Chi c'è dietro Helpy</a>
         </div>
       </div>
     </section>
@@ -542,25 +480,26 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#top" class="brand">
-          <img src="assets/logo.png?v=2" alt="" class="brand__mark" width="36" height="36" />
+        <a href="/" class="brand">
+          <img src="/assets/logo.png?v=2" alt="" class="brand__mark" width="36" height="36" />
           <span class="brand__name">Helpy</span>
         </a>
         <p>Prenotare un infermiere a domicilio non è mai stato così semplice.</p>
       </div>
 
-      <nav class="footer__col" aria-label="Sezioni">
+      <nav class="footer__col" aria-label="Prodotto">
         <h4>Prodotto</h4>
-        <a href="#problema">Il problema</a>
-        <a href="#soluzione">La soluzione</a>
-        <a href="#servizi">I servizi</a>
-        <a href="#app">L'app</a>
+        <a href="/#servizi">I servizi</a>
+        <a href="/app">L'app</a>
+        <a href="/app#infermieri">Per gli infermieri</a>
+        <a href="/app#sicurezza">Sicurezza e pagamenti</a>
       </nav>
 
       <nav class="footer__col" aria-label="Azienda">
         <h4>Azienda</h4>
-        <a href="#sicurezza">Sicurezza</a>
-        <a href="#contatti">Contatti</a>
+        <a href="/chi-siamo">Chi siamo</a>
+        <a href="/chi-siamo#team">Chi c'è dietro</a>
+        <a href="/contatti">Contatti</a>
       </nav>
 
       <div class="footer__col">
@@ -570,14 +509,14 @@
       </div>
     </div>
     <div class="container footer__bottom">
-      <span>© 2026 Helpy. Tutti i diritti riservati.</span>
-      <span class="footer__muted">Abbiamo partecipato alla Start Cup Lazio 2026</span>
+      <span>© 2026 Helpy · Società in corso di costituzione</span>
+      <span class="footer__muted">Start Cup Lazio 2026 · Incubata da Tor Valley — Start Lab Tor Vergata</span>
     </div>
   </footer>
 
   <!-- Ionicons -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>

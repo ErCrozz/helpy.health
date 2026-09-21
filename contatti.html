@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0E33A9" />
+
+  <title>Contatti — Helpy</title>
+  <meta name="description" content="Scrivici: siamo due fondatori, rispondiamo di persona. Che tu sia un paziente, un infermiere, una farmacia o un investitore." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://helpy.health/contatti" />
+  <meta property="og:title" content="Contatti — Helpy" />
+  <meta property="og:description" content="Scrivici: siamo due fondatori, rispondiamo di persona." />
+  <meta property="og:image" content="https://helpy.health/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="canonical" href="https://helpy.health/contatti" />
+  <link rel="icon" type="image/png" href="/assets/favicon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="nav__scrim" id="navScrim" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="/" class="brand" aria-label="Helpy — home">
+        <img src="/assets/logo.png?v=2" alt="" class="brand__mark" width="40" height="40" />
+        <span class="brand__name">Helpy</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navigazione principale">
+        <a href="/chi-siamo">Chi siamo</a>
+        <a href="/#servizi">Servizi</a>
+        <a href="/app">L'app</a>
+        <a href="/contatti" class="btn btn--primary btn--sm nav__cta">Contattaci</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true">
+        <div class="aurora aurora--1"></div>
+        <div class="aurora aurora--2"></div>
+      </div>
+      <div class="container page-hero__inner">
+        <p class="page-hero__eyebrow" data-reveal>
+          <ion-icon name="mail-outline"></ion-icon> Contatti
+        </p>
+        <h1 class="page-hero__title" data-reveal>
+          Scrivici.<br /><span class="grad-text">Rispondiamo noi.</span>
+        </h1>
+        <p class="page-hero__lead" data-reveal>
+          Siamo due fondatori, non un call center. Ogni messaggio che arriva
+          lo leggiamo e ci rispondiamo di persona.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CONTATTI DIRETTI ============ -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="mailbox" data-reveal>
+          <span class="mailbox__ic"><ion-icon name="mail-open-outline"></ion-icon></span>
+          <p class="mailbox__label">Scrivici a</p>
+          <a class="mailbox__addr" href="mailto:helpyteam.info@gmail.com">helpyteam.info@gmail.com</a>
+          <a href="mailto:helpyteam.info@gmail.com" class="btn btn--primary btn--lg">
+            <ion-icon name="send"></ion-icon>
+            Apri una mail
+          </a>
+        </div>
+
+        <div class="contact-cards contact-cards--grid" data-reveal>
+          <div class="ccard" style="--c:#059669">
+            <span class="ccard__ic"><ion-icon name="location"></ion-icon></span>
+            <div>
+              <strong>Dove siamo</strong>
+              <span>Roma · Lazio, Italia</span>
+            </div>
+          </div>
+
+          <div class="ccard" style="--c:#5b46f0">
+            <span class="ccard__ic"><ion-icon name="navigate"></ion-icon></span>
+            <div>
+              <strong>Dove partiamo</strong>
+              <span>EUR e Torrino, da gennaio 2027</span>
+            </div>
+          </div>
+
+          <div class="ccard" style="--c:#EA580C">
+            <span class="ccard__ic"><ion-icon name="time"></ion-icon></span>
+            <div>
+              <strong>Tempi di risposta</strong>
+              <span>Entro 24 ore nei giorni lavorativi</span>
+            </div>
+          </div>
+
+          <div class="ccard" style="--c:#0E33A9">
+            <span class="ccard__ic"><ion-icon name="people"></ion-icon></span>
+            <div>
+              <strong>Chi risponde</strong>
+              <span>I due fondatori, di persona</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AUDIENCE ============ -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section__head section__head--center" data-reveal>
+          <h2 class="section__title">Non solo<br /><span class="grad-text">pazienti.</span></h2>
+          <p class="section__intro">
+            Helpy funziona se funziona da entrambi i lati. Ecco come possiamo lavorare insieme.
+          </p>
+        </div>
+
+        <div class="audience">
+          <article class="aud" style="--c:#0E33A9" data-reveal>
+            <span class="aud__ic"><ion-icon name="medkit"></ion-icon></span>
+            <h3>Sei un infermiere?</h3>
+            <p>
+              Cerchiamo infermieri liberi professionisti su EUR, Torrino e Tor Vergata
+              per il lancio di gennaio 2027.
+            </p>
+            <ul class="aud__list">
+              <li><ion-icon name="checkmark-circle"></ion-icon> Pazienti del tuo quartiere, zero costi di acquisizione</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon> Il prezzo lo stabilisci tu, su una tariffa di riferimento</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon> Incassi garantiti in 1-2 giorni e fatturazione automatizzata</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon> Nessun vincolo di esclusiva, nessun turno imposto</li>
+            </ul>
+            <a href="mailto:helpyteam.info@gmail.com?subject=Candidatura%20infermiere" class="btn btn--primary">
+              Candidati <ion-icon name="arrow-forward"></ion-icon>
+            </a>
+          </article>
+
+          <article class="aud" style="--c:#059669" data-reveal>
+            <span class="aud__ic"><ion-icon name="business"></ion-icon></span>
+            <h3>Sei una farmacia o uno studio medico?</h3>
+            <p>
+              Intercetti il bisogno nell'istante in cui si manifesta. Con un codice QR
+              esposto al banco, i tuoi clienti prenotano un infermiere in tempo reale.
+            </p>
+            <ul class="aud__list">
+              <li><ion-icon name="checkmark-circle"></ion-icon> Un servizio in più da offrire, a costo zero</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon> Contributo marketing tracciabile e fatturato</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon> Nessun onere gestionale per te</li>
+              <li><ion-icon name="checkmark-circle"></ion-icon> Priorità sulle zone EUR, Torrino e Tor Vergata</li>
+            </ul>
+            <a href="mailto:helpyteam.info@gmail.com?subject=Proposta%20di%20partnership" class="btn btn--primary">
+              Diventa partner <ion-icon name="arrow-forward"></ion-icon>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--dark" id="faq">
+      <div class="container">
+        <div class="section__head section__head--center" data-reveal>
+          <h2 class="section__title">Domande<br /><span class="grad-text">frequenti.</span></h2>
+        </div>
+
+        <div class="faq" data-reveal>
+          <details class="faq__item">
+            <summary class="faq__q">
+              Quando sarà disponibile l'app?
+              <ion-icon name="add"></ion-icon>
+            </summary>
+            <div class="faq__a">
+              La piattaforma è già sviluppata ed è attualmente in beta privata.
+              Il servizio apre ai pazienti di EUR e Torrino a gennaio 2027, dopo
+              l'attivazione dei primi infermieri prevista a dicembre 2026.
+              Scrivici una mail per essere avvisato al lancio nella tua zona.
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">
+              In quali zone di Roma operate?
+              <ion-icon name="add"></ion-icon>
+            </summary>
+            <div class="faq__a">
+              Si parte da EUR e Torrino, poi Tor Vergata. Nel 2028 estendiamo a Roma Sud
+              e nel 2029 all'intera città. Apriamo una microzona per volta solo quando
+              abbiamo abbastanza infermieri attivi per rispondere davvero: preferiamo
+              coprire poco e bene, che promettere tutto e non esserci.
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">
+              Gli infermieri sono qualificati e assicurati?
+              <ion-icon name="add"></ion-icon>
+            </summary>
+            <div class="faq__a">
+              Sì, ed è una condizione non negoziabile. Nessun professionista diventa
+              prenotabile finché non verifichiamo l'iscrizione all'Ordine delle professioni
+              infermieristiche e la polizza di responsabilità civile professionale,
+              obbligatoria per legge (L. 24/2017).
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">
+              Quanto costa e come si paga?
+              <ion-icon name="add"></ion-icon>
+            </summary>
+            <div class="faq__a">
+              Ogni infermiere stabilisce il proprio prezzo, partendo da una tariffa
+              di riferimento che indichiamo noi per ciascuna prestazione. Quando scegli,
+              vedi il prezzo di ciascuno e puoi confrontarli: quello che leggi è quello
+              che paghi, materiale sanitario compreso. Si aggiunge solo una piccola
+              commissione di servizio, anch'essa sempre in chiaro. Si paga in app
+              tramite Stripe, l'addebito avviene a prestazione confermata e ricevi una
+              fattura detraibile. Nessun contante, nessun costo nascosto.
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">
+              Il materiale sanitario è incluso?
+              <ion-icon name="add"></ion-icon>
+            </summary>
+            <div class="faq__a">
+              Sì. Il materiale necessario alla prestazione lo porta l'infermiere ed è
+              già compreso nel prezzo che vedi prima di prenotare: non ti viene chiesto
+              nulla a parte, né devi procurarti niente tu.
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">
+              Come trattate i miei dati sanitari?
+              <ion-icon name="add"></ion-icon>
+            </summary>
+            <div class="faq__a">
+              L'architettura dell'app è progettata privacy by design e i dati sanitari
+              sono trattati secondo il GDPR. Non vendiamo dati a terzi: nessun ricavo di
+              Helpy deriva dalla cessione di dati. L'informativa completa sarà pubblicata
+              insieme all'app, prima che chiunque possa registrarsi.
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="brand">
+          <img src="/assets/logo.png?v=2" alt="" class="brand__mark" width="36" height="36" />
+          <span class="brand__name">Helpy</span>
+        </a>
+        <p>Prenotare un infermiere a domicilio non è mai stato così semplice.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Prodotto">
+        <h4>Prodotto</h4>
+        <a href="/#servizi">I servizi</a>
+        <a href="/app">L'app</a>
+        <a href="/app#infermieri">Per gli infermieri</a>
+        <a href="/app#sicurezza">Sicurezza e pagamenti</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Azienda">
+        <h4>Azienda</h4>
+        <a href="/chi-siamo">Chi siamo</a>
+        <a href="/chi-siamo#team">Chi c'è dietro</a>
+        <a href="/contatti">Contatti</a>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Scrivici</h4>
+        <a href="mailto:helpyteam.info@gmail.com">helpyteam.info@gmail.com</a>
+        <p class="footer__muted">Roma · Lazio, Italia</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Helpy · Società in corso di costituzione</span>
+      <span class="footer__muted">Start Cup Lazio 2026 · Incubata da Tor Valley — Start Lab Tor Vergata</span>
+    </div>
+  </footer>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
